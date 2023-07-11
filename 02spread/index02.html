@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let arr = [1,2,3];
+
+        function sum (x, y, z){
+
+            return x + y + z;
+        }
+
+        console.log(sum(1,2,3)); //6
+        console.log(sum(...arr)); //6
+
+        console.log(sum(10,20, ...arr)); //10,20,1,2,3 => 31 //매개변수 갯수가 다르더라도 호출됨
+
+        console.log('------------------------------------');
+        //가변 매개변수 - 가장 뒤에 선언되어야 합니다.
+        function sum2(y, ...x){
+            console.log(y);
+            console.log(x);
+        }
+
+        let arr2=[1,2,4]
+        sum2(10,arr2);
+        sum2(1);
+        sum2(1,2);
+        sum2(1,2,3);
+
+        console.log('------------------------------------');
+        //함수의 default 매개변수 - 함수 매개변수의 기본값
+        function sum3(x, y = 10, z = 20){
+
+            return x + y + z;
+
+        }
+
+        console.log(sum3(...arr)); //6
+        console.log(sum3(1)); //31
+        console.log(sum3(1,2)); //23
+
+        //주로 배열에 적용함
+        console.log(...arr + 10); //1,2,3 10
+
+    </script>
+
+
+</body>
+</html>

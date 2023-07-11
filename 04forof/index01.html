@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //for in 문장은 인덱스번호를 뽑고, for of는 요소를 가지고 나옴
+
+        let arr = ['a', 'b','c'];
+        
+        //es5
+        /* for(var i in arr){
+            console.log(i); //index번호가 나옴 0,1,2
+        } */
+
+        //es6 - 자바의 향상된 for문 형태 (요소 삭제x)
+        for(let i of arr){
+            console.log(i);
+        }
+
+        //객체는 돌릴 수 없다. error
+       /*  let person = {name: '홍길동', age: 20};
+
+        for(let i of person){
+
+            console.log(i);
+
+        } */
+
+        
+        //
+        const list = [{name: "홍길동", age:10}, 
+                      {name: "이순신", age:20}];
+        //i는 객체
+        /* for(let i of list) {
+
+            console.log(i);
+        } */
+        //of 와 구조분해할당
+        for(let {name,age} of list){
+            console.log(name);
+            console.log(age);
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

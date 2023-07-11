@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* 
+        var a = 10;
+        var a = '10';
+
+        console.log(a); //'10'
+
+        if(true){
+            var a = true;
+
+        }
+
+        console.log(a); //true
+ ->let 변수가 나온 이유*/
+ 
+ 
+        let a = 10;
+        //let a = '10'; // 중복 선언이 안됨
+
+        //변수의 유효범위가 중괄호가 되었다.
+        if(true){
+
+            let a = true;
+            console.log(a); //true
+        }
+
+        console.log(a);
+
+        console.log('-----------------------------------');
+
+        //상수선언
+        const gender = '남자';
+        //gender = '여자'; //변경 불가
+       
+
+        const arr = [1,2,3];
+        //arr = '홍길동';// 변경불가
+
+        arr[0] = '홍길동';
+        arr[1] = '이순신'; 
+        arr.push('홍길자'); //내부 값은 변경 가능
+
+        console.log(arr);
+
+        const person = {name : '홍길동'};
+        person.name = '이순신'; //내부 요소 변경 가능함.
+        person.age = 20;
+        console.log(person);
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

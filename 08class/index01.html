@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //일반 HTML에서는 굳이 클래스를 생성할 필요는 없습니다.
+        //멤버변수를 지칭할 때 키워드를 사용하지 않습니다.
+
+        class Person {
+
+            //멤버변수
+            a = '홍길동';
+            b = 10;
+            c = {};
+
+            //생성자 - constructor로 이름 통일, 1개만 선언이 가능함.
+            constructor (b){
+
+                this.b = b;
+            }
+
+            //함수 - function 키워드 없이 
+            func = () => {
+                console.log('함수 1번');
+                
+            }
+
+            //함수
+            func2(){
+                console.log(this.a, this.b, this.c);
+
+
+            }
+
+            
+        }
+        //매개변수 없이도 사용 가능함.
+        //let p = new Person(); -> 하지만 b값은 undefined로 나옴
+        //객체 생성1
+        let p = new Person(11);
+        console.log(p.a);
+        console.log(p.b);
+        console.log(p.c);
+        p.func();
+        p.func2();
+
+        //객체 생성2
+        let p2 = new Person(30);
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
